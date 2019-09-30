@@ -55,10 +55,50 @@ for (let i = 0; i < navigationItems.length; i++) {
 document.getElementById("logo-img").src = siteContent.nav["img-src"];
 // console.log(document.getElementById("logo-img"))
 
+//cta section
+const ctaH1 = document.querySelector('cta-text h1');
+ctaH1.textContent = siteContent['cta']["h1"];
+
+// const Button = document.querySelector('cta-text button');
+// Button.innerHTML = siteContent.cta["button"];
+
 // cta img
 document.getElementById("cta-img").src = siteContent.cta["img-src"];
 // console.log(document.getElementById("cta-img"))
 
 // section main-content img
 document.getElementById("middle-img").src = siteContent["main-content"]["middle-img-src"];
-console.log(document.getElementById("middle-img"))
+// console.log(document.getElementById("middle-img"))
+
+// section contact
+// const Contact = document.getElementsByClassName('contact');
+// Contact.innerHTML = siteContent.contact["contact-h4"];
+// console.log(Contact)
+
+//h4 elements
+const titleH4 = document.querySelectorAll('h4');
+// console.log(titleH4)
+titleH4[0].innerHTML = siteContent['main-content']["features-h4"];
+titleH4[1].innerHTML = siteContent['main-content']["about-h4"];
+titleH4[2].innerHTML = siteContent['main-content']["services-h4"];
+titleH4[3].innerHTML = siteContent['main-content']["product-h4"];
+titleH4[4].innerHTML = siteContent['main-content']["vision-h4"];
+titleH4[5].innerHTML = siteContent.contact["contact-h4"];
+
+// p elements
+const elementsP = document.querySelectorAll('p');
+console.log(elementsP)
+elementsP[0].innerHTML = siteContent['main-content']["features-content"];
+elementsP[1].innerHTML = siteContent['main-content']["about-content"];
+elementsP[2].innerHTML = siteContent['main-content']["services-content"];
+elementsP[3].innerHTML = siteContent['main-content']["product-content"];
+elementsP[4].innerHTML = siteContent['main-content']["vision-content"];
+elementsP[5].innerHTML = siteContent.contact["address"];
+elementsP[6].innerHTML = siteContent.contact["phone"];
+elementsP[7].innerHTML = siteContent.contact["email"];
+elementsP[8].innerHTML = siteContent.footer["copyright"];
+
+// footer 
+// const divFooter = document.querySelector('footer p');
+// divFooter.innerHTML = siteContent.footer["copyright"];
+// console.log(divFooter)
