@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4": "Contact",
-    "address": "123 Way 456 Street Somewhere, USA",
+    "address": "123 Way 456 Street <br> Somewhere, USA",
     "phone": "1 (888) 888-8888",
     "email": "sales@greatidea.io",
   },
@@ -55,12 +55,30 @@ for (let i = 0; i < navigationItems.length; i++) {
 document.getElementById("logo-img").src = siteContent.nav["img-src"];
 // console.log(document.getElementById("logo-img"))
 
-//cta section
-const ctaH1 = document.querySelector('cta-text h1');
-ctaH1.textContent = siteContent['cta']["h1"];
+//nav color change
+const secondaryNavColor = document.querySelectorAll('nav a');
+secondaryNavColor.forEach(element => {
+  // match headers with logo color
+  element.style.color = "green";
+});
 
-// const Button = document.querySelector('cta-text button');
-// Button.innerHTML = siteContent.cta["button"];
+
+
+//cta section
+
+const ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.innerHTML = siteContent.cta["h1"];
+// console.log(ctaH1)
+
+// const ctaButton = document.querySelectorAll('button');
+// ctaButton[0].innerHTML = siteContent.cta["button"];
+// const ctaH1 = document.querySelectorAll('cta-text');
+// ctaH1[0].innerHTML = siteContent['cta']["h1"];
+// console.log(ctaH1)
+
+const Button = document.querySelector('.cta-text button');
+Button.innerHTML = siteContent.cta["button"];
+// console.log(Button)
 
 // cta img
 document.getElementById("cta-img").src = siteContent.cta["img-src"];
@@ -87,7 +105,7 @@ titleH4[5].innerHTML = siteContent.contact["contact-h4"];
 
 // p elements
 const elementsP = document.querySelectorAll('p');
-console.log(elementsP)
+// console.log(elementsP)
 elementsP[0].innerHTML = siteContent['main-content']["features-content"];
 elementsP[1].innerHTML = siteContent['main-content']["about-content"];
 elementsP[2].innerHTML = siteContent['main-content']["services-content"];
