@@ -51,6 +51,14 @@ for (let i = 0; i < navigationItems.length; i++) {
 }
 // navigationItems[0].innerHTML = siteContent.nav["nav-item-1"];
 
+//nav added items
+const blog = document.createElement('a');
+blog.innerText = 'Blog';
+const secondarylink = document.querySelector('nav');
+secondarylink.appendChild(blog);
+// console.log(secondarylink)
+
+
 // navigation img
 document.getElementById("logo-img").src = siteContent.nav["img-src"];
 // console.log(document.getElementById("logo-img"))
@@ -120,3 +128,13 @@ elementsP[8].innerHTML = siteContent.footer["copyright"];
 // const divFooter = document.querySelector('footer p');
 // divFooter.innerHTML = siteContent.footer["copyright"];
 // console.log(divFooter)
+
+//add element two button
+const buttonFooter = document.createElement('button');
+buttonFooter.innerText = 'Take Me Home';
+buttonFooter.onclick = () => {
+  scroll(0, 0);
+}
+const secondaryButton = document.querySelector('footer');
+secondaryButton.prepend(buttonFooter);
+// console.log(secondarylink)
